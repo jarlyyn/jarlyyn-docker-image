@@ -1,4 +1,4 @@
-FROM debian:7.8
+FROM centos:centos7
 MAINTAINER Jarlyyn
-RUN apt-get update
-RUN  apt-get install nginx;apache2;nodejs -y
+RUN  yum install epel-release -y
+RUN  yum install nginx apache2 nodejs mysql -y
