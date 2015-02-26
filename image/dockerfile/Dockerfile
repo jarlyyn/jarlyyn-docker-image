@@ -7,4 +7,5 @@ RUN yum install nginx httpd nodejs npm proftpd -y
 RUN yum install mysql-server mysql -y
 RUN yum install php php-common -y
 RUN npm install pm2 -g
+RUN yum clean all
 CMD /bin/bash
