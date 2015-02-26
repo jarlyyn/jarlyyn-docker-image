@@ -1,5 +1,10 @@
 FROM centos:centos6
 MAINTAINER Jarlyyn
-RUN  yum install epel-release -y
 RUN yum update -y
-RUN  yum install nginx apache2 nodejs mysql -y
+RUN yum install epel-release -y
+RUN yum update -y
+RUN yum install nginx httpd nodejs npm proftpd -y
+RUN yum install mysql-server mysql -y
+RUN yum install php php-common -y
+RUN npm install pm2 -g
+CMD /bin/bash
