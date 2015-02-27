@@ -4,8 +4,14 @@ RUN yum update -y
 RUN yum install epel-release -y
 RUN yum update -y
 RUN yum install nginx httpd proftpd supervisor -y
+#database
 RUN yum install mysql-server mysql -y
+#php
 RUN yum install php php-common php-phpunit* -y
-RUN npm install nodejs npm pm2 mocha -g
+#node js
+RUN yum install nodejs npm -y
+RUN npm install pm2 mocha -g
+#clean cache
 RUN yum clean all
+#start cmd
 CMD supervisord -n
