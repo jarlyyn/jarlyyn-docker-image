@@ -1,5 +1,6 @@
 FROM centos:centos6
 MAINTAINER Jarlyyn
+ADD dockertools /docktools
 RUN yum update -y
 RUN yum install epel-release -y
 RUN yum update -y
@@ -15,4 +16,4 @@ RUN npm install pm2 mocha -g
 #clean cache
 RUN yum clean all
 #start cmd
-CMD supervisord -n
+CMD /docktools/install-script/start.sh
