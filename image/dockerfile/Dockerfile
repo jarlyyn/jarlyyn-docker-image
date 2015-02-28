@@ -4,7 +4,7 @@ COPY dockertools /dockertools
 RUN yum update -y
 RUN yum install epel-release -y
 RUN yum update -y
-RUN yum install nginx httpd proftpd supervisor -y
+RUN yum install nginx httpd proftpd supervisor nano -y
 #database
 RUN yum install mysql-server mysql -y
 RUN yum install redis hiredis php-redis -y
