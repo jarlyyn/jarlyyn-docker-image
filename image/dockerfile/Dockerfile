@@ -6,8 +6,9 @@ RUN yum update -y
 RUN yum install nginx httpd proftpd supervisor -y
 #database
 RUN yum install mysql-server mysql -y
+RUN yum install redis hiredis php-redis -y
 #php
-RUN yum install php php-common php-phpunit* -y
+RUN yum install php php-common php-phpunit* php-mcrypt-y
 #node js
 RUN yum install nodejs npm -y
 RUN npm install pm2 mocha -g
