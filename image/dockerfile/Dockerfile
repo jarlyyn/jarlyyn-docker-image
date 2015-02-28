@@ -1,6 +1,6 @@
 FROM centos:centos6
 MAINTAINER Jarlyyn
-ADD dockertools /dockertools
+COPY dockertools /dockertools
 RUN yum update -y
 RUN yum install epel-release -y
 RUN yum update -y
