@@ -16,4 +16,4 @@ RUN npm install pm2 mocha -g
 #clean cache
 RUN yum clean all
 #start cmd
-CMD /docktools/install-script/start.sh
+CMD bash /docktools/install-script/start.sh
